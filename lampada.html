@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Lâmpada Flix</title>
+</head>
+
+<style>
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0px;
+
+    background-color: rgb(37, 37, 37);
+    transition: ease 1s;
+    width: 100%;
+    display: block;
+}
+
+
+.bg_um{
+    transition: ease 2s;
+    width: 500px;
+    height: 600px;
+    border-radius: 50%;
+    display: none;
+    background-color: rgba(249, 239, 40, 0.162);
+}   
+
+.bg_dois{
+    background-color: rgba(251, 164, 23, 0.102);
+    transition: ease 2s;
+}
+
+.panel{
+    width: 100%;
+}
+
+
+.lamp{
+    width: 500px;
+    line-height: 30px;
+    margin-left: 100px;
+    position: absolute;
+}
+
+
+.anim{
+    color: yellow;
+    transition: ease 2s;
+}
+
+.anim2{
+    color: rgb(227, 135, 30);
+    transition: ease 2s;
+}
+
+.fundo{
+    color: rgba(255, 255, 255, 0.050);
+    width: 100%;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+
+
+.bt_toggle{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(39, 210, 219);
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+}
+
+.bt_toggle:hover{
+    background-color: rgb(38, 178, 185);
+}
+
+.bg_light_one{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.001);
+    border-radius: 50%;
+    display: block;
+    transform: scale(1);
+    transition: ease 2s;
+}
+
+.bg_light_two{
+    transform: scale(1.5);
+    transition: ease 1s;
+    background-color: rgba(239, 255, 9, 0.014);
+    display: block;
+}
+.bg_light_three{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-color: rgb(255, 255, 10);
+    border-radius: 50%;
+    display: none;
+}
+
+
+
+
+</style>
+
+<body>
+
+
+<div class="fundo">
+</div>
+
+
+
+<div class="bg_um"></div>
+
+<div class="panel">
+    <div class="bg_light_one"></div>
+    <div class="bg_light_two"></div>
+    <div class="bg_light_three"></div>
+    <!-- <div class="bg_light_two"></div> -->
+    <!-- <div class="bg_light_three"></div> -->
+
+
+    <div class="lamp">
+        <span style="font-size: 11px; margin-left:95px; font-weight:bolder">javascript, html e css| npc:8000, <span style="color:rgb(164, 164, 164); font-weight:bold"> Metflix / Metró</span>  </span> <br>
+        <span style="font-size: 13px; margin-left:75px; font-weight:bolder">javascript, html e css| npc:8000, <span style="color:rgb(144, 144, 144); font-weight:bold"> Metflix / Metró</span>  </span> <br>
+        <span style="font-size: 17px; margin-left:30px; font-weight:bolder">javascript, html e css| npc:8000, <span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 20px; font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró</span></span> <br>
+        <span style="font-size: 20px; font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró</span></span> <br>
+        <span style="font-size: 20px; font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró</span></span> <br>
+        <span style="font-size: 20px; font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró</span></span> <br>
+        <span style="font-size: 20px; font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró</span></span> <br>
+        <span style="font-size: 20px; font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró</span></span> <br>
+        <span style="font-size: 18px; margin-left:15px;font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 16px; margin-left:35px;font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 14px; margin-left:60px;font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 14px; margin-left:60px;font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 12px; margin-left:70px;font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 11px; margin-left:85px;font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 9px; margin-left:100px;font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 9px; margin-left:100px;font-weight:bolder">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 9px; margin-left:90px; font-weight:bolder; background-color:color:rgb(144, 144, 144); color:white;padding: 10px; border-radius:2px">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+        <span style="font-size: 9px; margin-left:90px; font-weight:bolder; background-color:color:rgb(144, 144, 144); color:white;padding: 10px; border-radius:2px">javascript, html e css| npc:8000,<span style="color:rgb(144, 144, 144)"> Metflix / Metró </span></span> <br>
+
+    </div>
+
+    <div class="bt_toggle" onclick="light_it_up()">Ligar</div>
+
+</div>
+
+
+<div class="texto" style="display: none;">
+███╗░░░███╗███████╗████████╗██████╗░░█████╗░
+████╗░████║██╔════╝╚══██╔══╝██╔══██╗██╔══██╗
+██╔████╔██║█████╗░░░░░██║░░░██████╔╝██║░░██║
+██║╚██╔╝██║██╔══╝░░░░░██║░░░██╔══██╗██║░░██║
+██║░╚═╝░██║███████╗░░░██║░░░██║░░██║╚█████╔
+
+tem nada aqui!
+</div>
+
+<script>
+    let $lamp = document.querySelector('.lamp');
+    let $bt_toggle = document.querySelector('.bt_toggle');
+    let $bg_light_one = document.querySelector('.bg_light_one');
+    let $bg_light_two = document.querySelector('.bg_light_two');
+    let $bg_um = document.querySelector('.bg_um');
+    let $bg_dois = document.querySelector('.bg_dois');
+    let $lumi = document.querySelector('.lumi');
+    let $fundo = document.querySelector('.fundo');
+    //let $photon = document.querySelector('.photon');
+
+     //setting lamp and bt to middle
+     let w = window.innerWidth;
+     let h = window.innerHeight;
+
+     //$bg_um.style.height = h+"px";
+
+     $lamp.style.left = (w/2)-200+"px";
+     $lamp.style.top = (h/10)+"px";
+
+     $bt_toggle.style.left = (w/2)+50 +"px";
+     $bt_toggle.style.top = (h/2)+250 +"px";
+
+     $bg_light_one.style.left = (w/2)-65 +"px";
+     $bg_light_one.style.top = (h/7) +"px";
+    
+     $fundo.style.width = w+'px'
+     $fundo.style.height = h+'px'
+
+     //$bg_um.style.left =  (w/2)-30 +"px";   
+     //$bg_um.style.top =  (h/6) +"px";
+
+
+     let stopthecount = 0
+     let luz
+  
+
+     setInterval(()=>{
+        if(stopthecount <= 120){
+            stopthecount+=1
+
+            let nd = document.createTextNode("Sempre quis fazer esse experimento social de criatividade com os amigos desenvolvedores pra ver o que sai mas nunca rolou:\
+                - Faz uma lâmpada com javascript, html e css\
+                Quem fizer a coisa mais criativa ganha R$100,00 no PayPal 🌝\
+                (envia por reply aqui, pode ser no jsfiddle etc");        
+            $fundo.appendChild(nd);   
+        }  
+
+    }, 300)    
+    
+
+    let a1=a2=a3=a4=a5=a6=a7=a8=a9=a10=a11=a12=a13=a14=a15=a16=a17=a18=b  = true ;
+                
+    let c0=0;
+    let c1=1;
+    let c2=2;
+    let c3=3;
+    let c4=4;
+    let c5=5;
+    let c6=6;
+    let c7=7;
+    let c8=8;
+    let c9=9;
+    let c10=10;
+    let c11=11;
+    let c12=12;
+    let c13=13;
+    let c14=14;
+    let c15=15;
+    let c16=16;
+    let c17=17;
+    let c18=18;
+
+    let msg = document.querySelector(".texto").innerHTML;
+    console.log(msg);
+
+
+     function light_it_up(){
+        let ligado = $bt_toggle.innerHTML;
+
+        if(ligado == 'Ligar'){
+            $bt_toggle.innerHTML = 'Ligada';
+            $bt_toggle.style.display = 'none';
+
+
+            //check if it's turning on
+            c1 = setInterval(()=>{
+                if(a1){
+                    $lamp.children[32].classList.add('anim');
+                    $lamp.children[32].classList.remove('anim2');
+                    a1 = false
+                }else{
+                    $lamp.children[32].classList.remove('anim');
+                    $lamp.children[32].classList.add('anim2');
+                    a1 = true;
+                }
+            },500) 
+
+            c2 = setInterval(()=>{
+                if(a2){
+                $lamp.children[30].classList.add('anim');
+                $lamp.children[30].classList.remove('anim2');
+                a2 = false
+                }else{
+                $lamp.children[30].classList.remove('anim');
+                $lamp.children[30].classList.add('anim2');
+                a2 = true;
+                }
+        },600) 
+
+            c3 = setInterval(()=>{
+            if(a3){
+            $lamp.children[28].classList.add('anim');
+            $lamp.children[28].classList.remove('anim2');
+            a3 = false
+            }else{
+            $lamp.children[28].classList.remove('anim');
+            $lamp.children[28].classList.add('anim2');
+            a3 = true;
+            }
+            },500) 
+
+            c4 = setInterval(()=>{
+                if(a4){
+                $lamp.children[26].classList.add('anim');
+                $lamp.children[26].classList.remove('anim2');
+                a4 = false
+                }else{
+                $lamp.children[26].classList.remove('anim');
+                $lamp.children[26].classList.add('anim2');
+                a4 = true;
+                    }
+                },1100) 
+
+           c5 =  setInterval(()=>{
+                if(a5){
+                $lamp.children[24].classList.add('anim');
+                $lamp.children[24].classList.remove('anim2');
+                a5 = false
+                }else{
+                $lamp.children[24].classList.remove('anim');
+                $lamp.children[24].classList.add('anim2');
+                a5 = true;
+                    }
+                },900) 
+    
+           c6= setInterval(()=>{
+                if(a6){
+                    $lamp.children[22].classList.add('anim');
+                    $lamp.children[22].classList.remove('anim2');
+                    a6 = false
+                }else{
+                    $lamp.children[22].classList.remove('anim');
+                    $lamp.children[22].classList.add('anim2');
+                    a6 = true;
+                    }
+                },1100) 
+
+
+
+            c7 = setInterval(()=>{
+                if(a7){
+                    $lamp.children[20].classList.add('anim');
+                    $lamp.children[20].classList.remove('anim2');
+                    a7 = false
+                }else{
+                    $lamp.children[20].classList.remove('anim');
+                    $lamp.children[20].classList.add('anim2');
+                    a7 = true;
+                    }
+                },1100) 
+
+
+                //$bg_light_one.style.display = 'block'
+
+            luz = setInterval(()=>{
+                if(b){
+                    $bg_light_one.classList.add('bg_light_two');
+                    b = false
+                }else{
+                    $bg_light_one.classList.remove('bg_light_two');
+                    b = true;
+                    }
+                },1000) 
+
+           
+            
+
+
+
+
+
+
+
+            c8 = setInterval(()=>{
+                if(a8){
+                    $lamp.children[18].classList.add('anim');
+                    $lamp.children[18].classList.remove('anim2');
+                    a8 = false
+                }else{
+                    $lamp.children[18].classList.remove('anim');
+                    $lamp.children[18].classList.add('anim2');
+                    a8 = true;
+                    }
+                },1100) 
+
+                
+            c9 = setInterval(()=>{
+                if(a9){
+                    $lamp.children[16].classList.add('anim');
+                    $lamp.children[16].classList.remove('anim2');
+                    a9 = false
+                }else{
+                    $lamp.children[16].classList.remove('anim');
+                    $lamp.children[16].classList.add('anim2');
+                    a9 = true;
+                    }
+                },1100) 
+
+
+            c10 = setInterval(()=>{
+                if(a10){
+                    $lamp.children[14].classList.add('anim');
+                    $lamp.children[14].classList.remove('anim2');
+                    a10 = false
+                }else{
+                    $lamp.children[14].classList.remove('anim');
+                    $lamp.children[14].classList.add('anim2');
+                    a10 = true;
+                    }
+                },1000) 
+
+
+            c11 = setInterval(()=>{
+                if(a11){
+                    $lamp.children[12].classList.add('anim');
+                    $lamp.children[12].classList.remove('anim2');
+                    a11 = false
+                }else{
+                    $lamp.children[12].classList.remove('anim');
+                    $lamp.children[12].classList.add('anim2');
+                    a11 = true;
+                    }
+                },1000) 
+                
+                
+            c12 = setInterval(()=>{
+                if(a12){
+                    $lamp.children[10].classList.add('anim');
+                    $lamp.children[10].classList.remove('anim2');
+                    a12 = false
+                }else{
+                    $lamp.children[10].classList.remove('anim');
+                    $lamp.children[10].classList.add('anim2');
+                    a12 = true;
+                    }
+                },1000) 
+
+
+            c13 = setInterval(()=>{
+                if(a13){
+                    $lamp.children[8].classList.add('anim');
+                    $lamp.children[8].classList.remove('anim2');
+                    a13 = false
+                }else{
+                    $lamp.children[8].classList.remove('anim');
+                    $lamp.children[8].classList.add('anim2');
+                    a13 = true;
+                    }
+                },1000) 
+
+
+            c14 = setInterval(()=>{
+                if(a14){
+                    $lamp.children[6].classList.add('anim');
+                    $lamp.children[6].classList.remove('anim2');
+                    a14 = false
+                }else{
+                    $lamp.children[6].classList.remove('anim');
+                    $lamp.children[6].classList.add('anim2');
+                    a14 = true;
+                    }
+                },1000) 
+            
+
+            c15 = setInterval(()=>{
+                if(a15){
+                    $lamp.children[4].classList.add('anim');
+                    $lamp.children[4].classList.remove('anim2');
+                    a15 = false
+                }else{
+                    $lamp.children[4].classList.remove('anim');
+                    $lamp.children[4].classList.add('anim2');
+                    a15 = true;
+                    }
+                },1000) 
+                
+                
+            c16 = setInterval(()=>{
+                if(a16){
+                    $lamp.children[2].classList.add('anim');
+                    $lamp.children[2].classList.remove('anim2');
+                    a16 = false
+                }else{
+                    $lamp.children[2].classList.remove('anim');
+                    $lamp.children[2].classList.add('anim2');
+                    a16 = true;
+                    }
+                },1000)  
+                
+                
+            c17 = setInterval(()=>{
+                if(a17){
+                    $lamp.children[0].classList.add('anim');
+                    $lamp.children[0].classList.remove('anim2');
+                    a17 = false
+                }else{
+                    $lamp.children[0].classList.remove('anim');
+                    $lamp.children[0].classList.add('anim2');
+                    a17 = true;
+                    }
+                },1000) 
+
+
+
+    //  -----------------------        
+    //  -----------------------        
+
+            
+            setTimeout(()=>{
+                $lamp.children[32].classList.add('anim');
+            },100) 
+            
+            setTimeout(()=>{
+                $lamp.children[30].classList.add('anim');
+            },200)
+            
+            setTimeout(()=>{
+                $lamp.children[28].classList.add('anim');
+            },300)
+            
+            setTimeout(()=>{
+                $lamp.children[26].classList.add('anim');
+            },400) 
+            
+            setTimeout(()=>{
+                $lamp.children[24].classList.add('anim');
+            },500) 
+            
+            setTimeout(()=>{
+                $lamp.children[22].classList.add('anim');
+            },600)
+            
+            setTimeout(()=>{
+                $lamp.children[20].classList.add('anim');
+            },700)
+            
+            setTimeout(()=>{
+                $lamp.children[18].classList.add('anim');
+            },800)
+            
+            setTimeout(()=>{
+                $lamp.children[16].classList.add('anim');
+            },900) 
+            
+            setTimeout(()=>{
+                $lamp.children[14].classList.add('anim');
+            },1000)
+            
+            setTimeout(()=>{
+                $lamp.children[12].classList.add('anim');
+            },1100)
+            
+            setTimeout(()=>{
+                $lamp.children[10].classList.add('anim');
+            },1200)
+
+            setTimeout(()=>{
+                $lamp.children[8].classList.add('anim');
+            },1300)
+            
+            setTimeout(()=>{
+                $lamp.children[6].classList.add('anim');
+            },1400)
+            
+            setTimeout(()=>{
+                $lamp.children[4].classList.add('anim');
+            },1500)
+            
+            setTimeout(()=>{
+                $lamp.children[2].classList.add('anim');
+            },1500)
+        
+            setTimeout(()=>{
+                $lamp.children[0].classList.add('anim');
+            },1500)
+            
+        
+        }else{
+
+            $bt_toggle.innerHTML = 'Ligar';
+            
+            
+        }
+
+
+     }
+
+</script>
+    
+</body>
+</html>
+
+
